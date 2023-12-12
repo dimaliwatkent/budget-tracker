@@ -5,13 +5,16 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Budget Tracker</title>
+  <title style="display: none;">Budget Tracker</title>
   <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Budget Tracker</h1>
-
+  <section class="hero_section">
+  <h1 class="title">Budget Tracker</h1>
   <h2>Add Budget Item</h2>
   <form id="budgetItemForm">
     <label for="type">Type:</label>
@@ -36,6 +39,7 @@
   <h2>Records</h2>
   <div id="records"></div>
   <div id="root"></div>
+  </section>
   <script type="module" src="/js/index.js "></script>
 </body>
 
