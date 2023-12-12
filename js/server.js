@@ -36,40 +36,27 @@ db.connect((err) => {
   console.log("Connected to the database");
 });
 
-app.get("/income", (req, res) => {
-  db.query("SELECT * FROM income", (err, results) => {
+app.get("/budget_items", (req, res) => {
+  db.query("SELECT * FROM budget_items", (err, results) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});
+app.get("/records", (req, res) => {
+  db.query("SELECT * FROM budget_items", (err, results) => {
     if (err) throw err;
     res.json(results);
   });
 });
 
-app.get("/expense", (req, res) => {
-  db.query("SELECT * FROM expense", (err, results) => {
-    if (err) throw err;
-    res.json(results);
-  });
-});
-
-app.post("/income", (req, res) => {
-  const { category, note, amount, date } = req.body;
+app.post("/budget_items", (req, res) => {
+  const { type, category, note, amount, date } = req.body;
   db.query(
-    "INSERT INTO income SET ?",
-    { category, note, amount, date },
+    "INSERT INTO budget_items SET ?",
+    { type, category, note, amount, date },
     (err, results) => {
       if (err) throw err;
-      res.json({ message: "Income added successfully" });
-    },
-  );
-});
-
-app.post("/expense", (req, res) => {
-  const { category, note, amount, date } = req.body;
-  db.query(
-    "INSERT INTO expense SET ?",
-    { category, note, amount, date },
-    (err, results) => {
-      if (err) throw err;
-      res.json({ message: "Expense added successfully" });
+      res.json({ message: "Budget item added successfully" });
     },
   );
 });
