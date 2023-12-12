@@ -10,6 +10,46 @@
 </head>
 
 <body>
+  <h1>Budget Tracker</h1>
+
+  <h2>Add Income</h2>
+  <form id="incomeForm">
+    <label for="incomeCategory">Category:</label>
+    <select id="incomeCategory" name="category">
+      <option value="allowance">Allowance</option>
+      <option value="job">Job</option>
+    </select><br />
+    <label for="incomeNote">Note:</label>
+    <input type="text" id="incomeNote" name="note" /><br />
+    <label for="incomeAmount">Amount:</label>
+    <input type="number" id="incomeAmount" name="amount" /><br />
+    <label for="incomeDate">Date:</label>
+    <input type="date" id="incomeDate" name="date" /><br />
+    <input type="submit" value="Add Income" />
+  </form>
+
+  <h2>Add Expense</h2>
+  <form id="expenseForm">
+    <label for="expenseCategory">Category:</label>
+    <select id="expenseCategory" name="category">
+      <option value="clothing">Clothing</option>
+      <option value="education">Education</option>
+      <option value="electronics">Electronics</option>
+      <option value="food">Food</option>
+      <option value="transportation">Transportation</option>
+    </select><br />
+    <label for="expenseNote">Note:</label>
+    <input type="text" id="expenseNote" name="note" /><br />
+    <label for="expenseAmount">Amount:</label>
+    <input type="number" id="expenseAmount" name="amount" /><br />
+    <input type="submit" value="Add Expense" />
+  </form>
+
+  <h2>Total Balance</h2>
+  <p id="totalBalance"></p>
+
+  <h2>Records</h2>
+  <div id="records"></div>
   <div id="root"></div>
   <script type="module" src="/js/index.js "></script>
 </body>
