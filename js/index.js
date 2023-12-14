@@ -1,6 +1,12 @@
 // sets the current date
 function setCurrentDate() {
-  document.getElementById("date").valueAsDate = new Date();
+  const date = new Date();
+  const year = date.getFullYear();
+  const day = date.getDate();
+  const month = date.getMonth();
+
+  document.getElementById("dateDisplay").innerHTML = year + "/" + day + "/" + month;
+  document.getElementById("date").valueAsDate = date;
 }
 
 // Add event listener for type select
@@ -54,10 +60,7 @@ function fetchAndCalculateBalance() {
         `Total Balance: ${totalBalance}`;
     });
 }
-// Displays the records
-window.onload = function () {
-  fetchRecords();
-};
+
 
 function fetchAndDisplayRecords() {
   // Fetch the records

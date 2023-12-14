@@ -141,4 +141,11 @@ option{
     color: black;
 }
 
-/* Colors */
+#records{
+    overflow:scroll;
+    height: 18rem;
+    overflow-x: hidden;
+}
+#date{
+    display: none;
+}
