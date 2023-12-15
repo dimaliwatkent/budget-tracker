@@ -2,7 +2,6 @@
 
 ## Links
 
-- Live site url: [site name](https://)
 - Repositroy: [Github](https://github.com/zdotdev/budget-tracker.git)
 
 ## Description
