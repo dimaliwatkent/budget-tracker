@@ -16,8 +16,8 @@ app.use(
   }),
 );
 
-app.get("/", (req, res) => {
-  res.send("Budget Tracker");
+app.get("/about", (req, res) => {
+  res.send("about page Budget Tracker");
 });
 
 app.listen(port, () => {
