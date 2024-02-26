@@ -4,7 +4,7 @@ function setCurrentDate() {
   const dateArray = [date.getFullYear(), date.getDate(), date.getMonth()]
   const [year, day, month] = dateArray
 
-  document.getElementById("dateDisplay").innerHTML = year + "/" + day + "/" + month;
+  document.getElementById("dateDisplay").innerHTML = [year,day,month].join("/");
   document.getElementById("date").valueAsDate = date;
 }
 
