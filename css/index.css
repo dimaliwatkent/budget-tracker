@@ -146,6 +146,6 @@ option{
     height: 18rem;
     overflow-x: hidden;
 }
-#date{
-    display: none;
+#dateDisplay{
+    border: none;
 }

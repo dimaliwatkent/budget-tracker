@@ -1,12 +1,11 @@
 // sets the current date
 function setCurrentDate() {
   const date = new Date();
-  const year = date.getFullYear();
-  const day = date.getDate();
-  const month = date.getMonth();
+  const dateArray = [date.getFullYear(), date.getDate(), date.getMonth()]
+  const [year, day, month] = dateArray
 
-  document.getElementById("dateDisplay").innerHTML = year + "/" + day + "/" + month;
-  document.getElementById("date").valueAsDate = date;
+  document.getElementById("dateDisplay").value = [year,day,month].join("/");
+  document.getElementById("dateDisplay").readOnly = true
 }
 
 // Add event listener for type select
