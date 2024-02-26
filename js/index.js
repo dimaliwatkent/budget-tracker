@@ -4,8 +4,8 @@ function setCurrentDate() {
   const dateArray = [date.getFullYear(), date.getDate(), date.getMonth()]
   const [year, day, month] = dateArray
 
-  document.getElementById("dateDisplay").innerHTML = [year,day,month].join("/");
-  document.getElementById("date").valueAsDate = date;
+  document.getElementById("dateDisplay").value = [year,day,month].join("/");
+  document.getElementById("dateDisplay").readOnly = true
 }
 
 // Add event listener for type select
